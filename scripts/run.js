@@ -1,5 +1,5 @@
 const main = async () => {  
-    const [owner,randomPerson] = await hre.ethers.getSigners(); 
+    const [owner,randomPerson] = await hre.ethers.getSigners(); //hre object comes in a HardHat executable environment
     const waveContractFactory = await hre.ethers.getContractFactory("WavePortal"); //we get the hre object on the fly from the hardhat execution environment
     const waveContract = await waveContractFactory.deploy(); 
     await waveContract.deployed(); 
